@@ -7,7 +7,6 @@ const gameWinner = document.getElementById("gameWinner");
 const roundsCount = document.getElementById("roundsCount");
 const playerScoreOutput = document.getElementById("playerScoreOutput");
 const compScoreOutput = document.getElementById("compScoreOutput");
-const headlineLetsPlay = document.getElementById("headlineLetsPlay");
 // Game-btns FORM for PLAYER game decision
 const playerGameChoices = document.getElementById("playerGameChoices");
 
@@ -43,7 +42,7 @@ const playGame = (playerInput) => {
         (compChoice === "scissors" && playerChoice === "paper")) {
       scoreComp++;
       roundsPlayed++;
-      roundWinner.innerHTML = "You lose..";
+      roundWinner.innerHTML = "Computer wins";
   
     } else if ((compChoice === "scissors" && playerChoice === "rock") || 
               (compChoice === "rock" && playerChoice === "paper") || 
@@ -60,7 +59,6 @@ const playGame = (playerInput) => {
     //this statement has to be embedded here, otherwise the rounds-count geht eine zahl drüber bevor GAME OVER kommt !!!
     if (roundsPlayed === howManyRounds) {
       playerGameChoices.style.display = "none";
-      headlineLetsPlay.style.display = "none";
 
       if (scorePlayer > scoreComp) {
           gameWinner.innerHTML = `<h2>GAME OVER</h2> <p>You seem to be a true mind-reader. You won the game!</p>`;
@@ -80,6 +78,9 @@ const playGame = (playerInput) => {
     window.alert("Choose the number of rounds!")
   }
 }
+
+
+
 
 
 

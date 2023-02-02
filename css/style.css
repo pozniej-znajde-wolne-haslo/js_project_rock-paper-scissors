@@ -1,3 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  width: 600px;
+  margin: auto;
+  border: 1px solid #9f9f9f;
+  padding: 20px;
+  line-height: 2;
+}
+body h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+body article:first-of-type {
+  border: 1px solid #9f9f9f;
+}
+body article:first-of-type h2, body article:first-of-type form {
+  text-align: center;
+}
+body article #roundsCount {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+body article #scores-table {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 40px;
+}
+body article #roundWinner {
+  text-align: center;
+  border-bottom: 1px solid #9f9f9f;
+}
+body article:last-of-type a {
+  text-decoration: none;
+  color: rgb(28, 76, 78);
+  border: 1px solid rgb(28, 76, 78);
+  padding: 10px;
+}
+body #playerGameChoices {
+  text-align: center;
+  margin-top: 20px;
+}
+body #playerGameChoices h3 {
+  margin-bottom: 10px;
+}
+body #playerGameChoices a {
+  font-size: 40px;
+}
+body #playerGameChoices a:nth-child(2), body #playerGameChoices a:nth-child(3) {
+  margin-right: 30px;
+}
 
 /*# sourceMappingURL=style.css.map */
