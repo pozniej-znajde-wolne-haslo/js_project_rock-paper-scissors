@@ -31,7 +31,7 @@ const playGame = (playerInput) => {
   let compChoice = compChoicesArray[Math.floor(Math.random()*compChoicesArray.length)];
   console.log(compChoice);
 
-  // btn chosen - value im html als onclick fn parameter.. hier als plaerInput als parameter / und dann variable, die das speichert..
+  // btn chosen - value im html als onclick fn argument.. hier als plaerInput (als parameter for the fn) / und dann variable, die das speichert..
   let playerChoice = playerInput;
   console.log(playerChoice);
 
@@ -52,7 +52,8 @@ const playGame = (playerInput) => {
         roundWinner.innerHTML = "You win!";
     
     } else if  ((compChoice === "rock" && playerChoice === "rock") || 
-                (compChoice === "paper" && playerChoice === "paper") || (compChoice === "scissors" && playerChoice === "scissors")) {
+                (compChoice === "paper" && playerChoice === "paper") || 
+                (compChoice === "scissors" && playerChoice === "scissors")) {
         roundWinner.innerHTML = "Draw. Round doesn't count.";
     }
 
@@ -65,7 +66,7 @@ const playGame = (playerInput) => {
       } else if (scorePlayer < scoreComp) {
         gameWinner.innerHTML = `<h2>GAME OVER</h2> <p>Computer won this time.. Wanna have another go?</p>`;
       } else {
-        gameWinner.innerHTML = `<h2>GAME OVER</h2> <p>Draw. No winner this time. Another game another chance?</p>`;
+        gameWinner.innerHTML = `<h2>GAME OVER</h2> <p>Draw. No winner this time. Another game, another chance?</p>`;
       }
     }
 
